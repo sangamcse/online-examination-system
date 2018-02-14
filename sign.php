@@ -25,11 +25,11 @@ $password = hash('sha512',$password);
 
 $q3 = mysqli_query($con,"INSERT INTO user VALUES ('$name','$gender','$college','$email','$phone','$password')");
 if($q3){
-	session_start();
-	$_SESSION["email"] = $email;
-	$_SESSION["name"] = $name;
-	
-	header("location:account.php?q=1");
+    session_start();
+    $_SESSION["email"] = $email;
+    $_SESSION["name"] = $name;
+
+    header("location:account.php?q=1");
 }
 else{
 header("location:signup.php?q7=Email already registered!!");

@@ -4,6 +4,11 @@ files = **.php
 language = PHP
 use_spaces = True
 
+[all.css]
+bears = CSSLintBear
+files = css/**.css
+language = css
+
 [cli]
 bears = SpaceConsistencyBear
 files = **.php

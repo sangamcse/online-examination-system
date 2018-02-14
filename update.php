@@ -27,7 +27,7 @@ if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='mangalam7550851438') {
 $eid=@$_GET['eid'];
 $result = mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' ") or die('Error');
 while($row = mysqli_fetch_array($result)) {
-	$qid = $row['qid'];
+    $qid = $row['qid'];
 $r1 = mysqli_query($con,"DELETE FROM options WHERE qid='$qid'") or die('Error');
 $r2 = mysqli_query($con,"DELETE FROM answer WHERE qid='$qid' ") or die('Error');
 }
@@ -142,7 +142,7 @@ $r++;
 $s=$s+$sahi;
 $q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`sahi`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
 
-} 
+}
 else
 {
 $q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " )or die('Error129');
