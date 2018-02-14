@@ -1,0 +1,11 @@
+[all]
+bears = SpaceConsistencyBear
+files = **.php
+language = PHP
+use_spaces = True
+
+[cli]
+bears = SpaceConsistencyBear
+files = **.php
+language = PHP
+use_spaces = True
